@@ -20,7 +20,7 @@ class Caculator {
 		this.operation = undefined
 	}
 	
-	delete(){
+	delete() {
 	  	if(this.currentDisplay === '') {
 			this.upperDisplay = this.upperDisplay.toString().slice(0, -1)
 	  	}    
