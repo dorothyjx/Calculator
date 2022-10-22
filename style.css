@@ -1,40 +1,61 @@
 *, *::before, *::after{
 	box-sizing: border-box;
 	font-weight: normal;
-  }
-  body {
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
 	padding: 0;
 	margin: 0;
 	background-color: pink;
-  }
-  .container {
+}
+
+h1 {
+	color: black;
+	font-size: 4rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.container {
 	display: grid;
 	justify-content: center;
 	align-content: center;
+	margin-top: -180px;
 	min-height: 100vh;
-	grid-template-columns: repeat(4, 80px);
-	grid-template-rows: minmax(120px, auto) repeat(5, 80px);
-  }
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(150px, auto) repeat(5, 100px);
+}
   
-  .container > button {
+.container > button {
 	cursor: pointer;
 	font-size: 2rem;
 	border: 1px solid white;
 	outline: none;
 	background-color: rgba(255, 255, 255, 0.75);
-  }
-  .container > button:hover {
+}
+.container > button:hover {
 	background-color: rgba(255, 255, 255, 0.9);
-  }
-  .container > button:active {
+}
+.container > button:active {
 	transform: scale(0.96);
-  }
+}
+
+@media screen and (max-width: 800px) {
+	h1 {
+		display: none;
+	}
+	.container {
+		transform: scale(0.8);
+	}
+}
   
-  .double-width {
+.double-width {
 	grid-column: span 2;
-  }
+}
   
-  .display {
+.display {
 	grid-column: 1/ -1;
 	background-color: rgba(0, 0, 0, 0.75);
 	display: flex;
@@ -44,14 +65,14 @@
 	padding: 10px;
 	word-wrap: break-word;
 	word-break: break-all;
-  }
+}
   
-  .display .upperDisplay {
+.display .upperDisplay {
 	color: rgb(255, 165, 0, 0.9);
 	font-size: 1.5rem;
-  }
+}
   
-  .display .currentDisplay {
+.display .currentDisplay {
 	color: white;
 	font-size: 2.5rem;
-  }
+}

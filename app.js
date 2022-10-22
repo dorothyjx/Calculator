@@ -39,7 +39,7 @@ class Caculator {
 	
 	chooseOperation(operation) {
 		//if(this.currentDisplay === '') return
-		console.log(this.currentDisplay)
+		//console.log(this.currentDisplay)
 		if(this.upperDisplay !== '') {
 			if(isNaN(this.upperDisplay.slice(-1))) {
 				this.currentDisplay = this.upperDisplay
