@@ -72,7 +72,8 @@ class Caculator {
 				computation = prevNumber * currentNumber
 				break
 			case '÷':
-				computation = prevNumber / currentNumber
+				//computation = prevNumber / currentNumber
+				computation = parseFloat((prevNumber / currentNumber).toFixed(8))
 				break
 			default:
 				return
